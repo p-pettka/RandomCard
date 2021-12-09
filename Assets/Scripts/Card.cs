@@ -8,6 +8,7 @@ public class Card : ScriptableObject
     public string cardName;
     public string description;
     public Sprite cardImage;
+    public Sprite cardIllustration;
     public int hp;
     public int mana;
     public int speed;
