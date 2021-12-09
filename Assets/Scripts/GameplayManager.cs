@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class GameplayManager : MonoBehaviour
 {
+    public GameDatabase m_gameDatabase;
+
     private CardController m_cardController;
     private Card generatedCard;
-    public Sprite illustration;
 
     // Start is called before the first frame update
     void Start()
     {
         m_cardController = FindObjectOfType<CardController>();
         generatedCard = ScriptableObject.CreateInstance<Card>();
-        generatedCard.cardIllustration = illustration;
+        generatedCard.cardIllustration = m_gameDatabase.illustration1;
         m_cardController.generatedCard = generatedCard;
         m_cardController.AssignNewCard();
     }
