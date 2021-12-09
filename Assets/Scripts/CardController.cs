@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CardController : MonoBehaviour
 {
-    public Card generatedCard;
+    public Card currentCard;
     public Image cardImage;
     public Image cardIllustration;
     public Text cardName;
@@ -16,12 +16,12 @@ public class CardController : MonoBehaviour
 
     public void AssignNewCard()
     {
-        cardImage.sprite = generatedCard.cardImage;
-        cardIllustration.sprite = generatedCard.cardIllustration;
-        cardName.text = generatedCard.cardName;
-        cardDescription.text = generatedCard.description;
-        hp.text = generatedCard.hp.ToString();
-        mana.text = generatedCard.mana.ToString();
-        speed.text = generatedCard.speed.ToString();
+        cardImage.sprite = currentCard.cardImage;
+        cardIllustration.sprite = currentCard.cardIllustration;
+        cardName.text = currentCard.cardName;
+        cardDescription.text = currentCard.description;
+        hp.text = currentCard.hp.ToString();
+        mana.text = currentCard.mana.ToString();
+        speed.text = currentCard.speed.ToString();
     }
 }
