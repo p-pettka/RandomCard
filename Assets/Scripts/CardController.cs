@@ -14,7 +14,7 @@ public class CardController : MonoBehaviour
     public Text mana;
     public Text speed;
 
-    public void Start()
+    public void AssignNewCard()
     {
         cardImage.sprite = generatedCard.cardImage;
         cardIllustration.sprite = generatedCard.cardIllustration;
