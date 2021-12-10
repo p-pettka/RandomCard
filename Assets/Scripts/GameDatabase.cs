@@ -8,6 +8,4 @@ public class GameDatabase : ScriptableObject
 
     [Header("Sprites")]
     public Sprite cardSprite;
-    public Sprite illustration1;
-    public Sprite illustration2;
 }

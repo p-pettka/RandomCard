@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class GameplayManager : MonoBehaviour
 {
-    public GameDatabase m_gameDatabase;
-
     private CardController m_cardController;
     private CardGenerator m_cardGenerator;
     private Card generatedCard;
@@ -23,11 +21,6 @@ public class GameplayManager : MonoBehaviour
         m_cardController = FindObjectOfType<CardController>();
         m_cardGenerator = FindObjectOfType<CardGenerator>();
 
-        //generatedCard = ScriptableObject.CreateInstance<Card>();
-        /*generatedCard.cardIllustration = m_gameDatabase.illustration1;
-        generatedCard.cardImage = m_gameDatabase.cardSprite;
-        m_cardController.generatedCard = generatedCard;
-        m_cardController.AssignNewCard();*/
         m_cardGenerator.GenerateCard();
         generatedCard = m_cardGenerator.generatedCard;
         UpdateCard();

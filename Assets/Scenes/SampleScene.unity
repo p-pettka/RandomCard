@@ -388,6 +388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_gameDatabase: {fileID: 11400000, guid: 3f1788d72c6544b149baa77ee88044b9, type: 2}
+  generatedCard: {fileID: 0}
 --- !u!4 &904843867
 Transform:
   m_ObjectHideFlags: 0
