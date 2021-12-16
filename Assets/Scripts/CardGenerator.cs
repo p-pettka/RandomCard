@@ -9,18 +9,18 @@ public class CardGenerator : MonoBehaviour
     private Sprite[] illustrations;
 
     private string[] names = { "Garrosh", "Deathwing", "Arthas", "Archimonde" };
-    private string[] descriptions = { "This is description 1", "This is descripton 2", "This is description 3", "This is description 4" };
+    private string[] descriptions = { "This is a description 1", "This is a descripton 2", "This is a description 3", "This is a description 4" };
 
-    public void GenerateCard()
+    public void CreateCard()
     {
         generatedCard = ScriptableObject.CreateInstance<Card>();
         generatedCard.cardImage = m_gameDatabase.cardSprite;
         generatedCard.cardIllustration = illustrations[Random.Range(0, illustrations.Length)];
         generatedCard.cardName = names[Random.Range(0, names.Length)];
         generatedCard.description = descriptions[Random.Range(0, descriptions.Length)];
-        generatedCard.hp = Random.Range(0, 99);
-        generatedCard.mana = Random.Range(0, 20);
-        generatedCard.speed = Random.Range(0, 10);
+        generatedCard.hp = Random.Range(1, 99);
+        generatedCard.mana = Random.Range(1, 20);
+        generatedCard.speed = Random.Range(1, 10);
     }
 
     private void LoadSprites()
