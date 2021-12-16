@@ -19,6 +19,13 @@ public class ButtonsController : MonoBehaviour
         {
             m_gameplayManager.GenerateCard();
         });
-
+        ExecuteButton.onClick.AddListener(delegate
+        {
+            m_gameplayManager.ExecuteCard();
+        });
+        SaveButton.onClick.AddListener(delegate
+        {
+            
+        });
     }
 }
