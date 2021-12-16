@@ -9,7 +9,7 @@ public class GameplayManager : MonoBehaviour
 
     // Start is called before the first frame update
 
-    private void GenerateCard()
+    public void GenerateCard()
     {
         m_cardGenerator.CreateCard();
         m_cardController.currentCard = m_cardGenerator.generatedCard;
