@@ -25,6 +25,7 @@ public class GameplayManager : MonoBehaviour
         m_playerController.playerSpeed = m_cardController.currentCard.speed;
 
         m_playerController.UpdatePlayerStats();
+        GenerateCard();
     }
 
     public void SaveCard()

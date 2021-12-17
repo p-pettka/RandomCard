@@ -17,14 +17,14 @@ public class PlayerController : MonoBehaviour
     {
         hp.text = "HP: " + playerHp.ToString();
         mana.text = "Mana: " + playerMana.ToString();
-        speed.text = "Speed: " + playerSpeed.ToString();
+        speed.text = "Speed: " + playerSpeed.ToString() + "%";
     }
 
     private void Start()
     {
-        playerHp = 20;
-        playerMana = 10;
-        playerSpeed = 50;
+        playerHp = 50;
+        playerMana = 20;
+        playerSpeed = 100;
 
         UpdatePlayerStats();
     }
