@@ -25,7 +25,7 @@ public class ButtonsController : MonoBehaviour
         });
         SaveButton.onClick.AddListener(delegate
         {
-            
+            m_gameplayManager.SaveCard();
         });
     }
 }

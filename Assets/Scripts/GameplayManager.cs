@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class GameplayManager : MonoBehaviour
 {
@@ -24,6 +25,13 @@ public class GameplayManager : MonoBehaviour
         m_playerController.playerSpeed = m_cardController.currentCard.speed;
 
         m_playerController.UpdatePlayerStats();
+    }
+
+    public void SaveCard()
+    {
+        string prefabsLocation = "Assets/Prefabs/" + "SavedCard" + ".prefab";
+        prefabsLocation = AssetDatabase.GenerateUniqueAssetPath(prefabsLocation);
+        PrefabUtility.SaveAsPrefabAssetAndConnect(m_cardController.gameObject, prefabsLocation, InteractionMode.UserAction);
     }
 
     void Start()
